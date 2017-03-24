@@ -55,7 +55,7 @@ public class ConnectDatabase {
      * @param pesel
      * @return
      */
-    protected boolean insertPerson(String name, String surname, String sex, String street, String town, String phone,int pesel)  {
+    protected boolean insertPerson(String name, String surname, String sex, String street, String town, String phone,String pesel)  {
         try {
             PreparedStatement preparedStatment;
             preparedStatment = connection.prepareStatement("insert into PersonDatabase (name,surname,sex,street,town,phone,pesel) values(?,?,?,?,?,?,?);  ");
@@ -66,7 +66,7 @@ public class ConnectDatabase {
             preparedStatment.setString(4, street);
             preparedStatment.setString(5, town);
             preparedStatment.setString(6, phone);
-             preparedStatment.setInt(7, pesel);
+             preparedStatment.setString(7, pesel);
    
             preparedStatment.executeUpdate();
         } catch (SQLException e) {

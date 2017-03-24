@@ -349,12 +349,13 @@ public class Window extends javax.swing.JFrame {
             ConnectDatabase connectDatabase;    
             connectDatabase = new ConnectDatabase();
             
-            connectDatabase.insertPerson(name.getText(), surname.getText(), sex.getSelectedItem().toString(), street.getText(), town.getText(), phone.getText(), Integer.valueOf(pesel.getText()));
+            connectDatabase.insertPerson(name.getText(), surname.getText(), sex.getSelectedItem().toString(), street.getText(), town.getText(), phone.getText(), pesel.getText());
+            
             connectDatabase.closeConnection();
             JOptionPane.showMessageDialog(null, "Zapisano do bazy danych");
         }
         else{
-            JOptionPane.showMessageDialog(null, "nie mozna Zapisano do bazy danych");
+            JOptionPane.showMessageDialog(null, "nie mozna Zapisac do bazy danych");
         }
     }//GEN-LAST:event_saveToBaseMouseClicked
 

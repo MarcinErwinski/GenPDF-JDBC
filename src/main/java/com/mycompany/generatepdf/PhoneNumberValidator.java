@@ -14,11 +14,11 @@ public class PhoneNumberValidator {
     /**
      *
      * @param phoneNo
-     * @return
+     * @return 
      */
-    public static boolean validatePhoneNumber(String phoneNo) {
+    public static boolean validateNumber(String phoneNo, int ) {
 		//validate phone numbers of format "1234567890"
-		if (phoneNo.matches("\\d{9}")) return true;
+		if (phoneNo.matches("\\d{"+9+"}")) return true;
 		//validating phone number with -, . or spaces
 		else if(phoneNo.matches("\\d{3}[-\\.\\s]\\d{3}[-\\.\\s]\\d{3}")) return true;
 		//validating phone number with extension length from 3 to 5
