@@ -345,7 +345,7 @@ public class Window extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton4ActionPerformed
 
     private void saveToBaseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_saveToBaseMouseClicked
-        if(PhoneNumberValidator.validatePhoneNumber(phone.getText())){
+        if(numberValidator.validateNumber(pesel.getText(),11)&numberValidator.validateNumber(phone.getText(),9)){
             ConnectDatabase connectDatabase;    
             connectDatabase = new ConnectDatabase();
             
